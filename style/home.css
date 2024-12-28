@@ -1,0 +1,160 @@
+#productCarousel {
+  width: 1300px;
+  margin: auto;
+  margin-top: 30px;
+  height: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(225, 33, 33);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Điều chỉnh chiều cao ảnh */
+.card-img-top {
+  height: 300px; /* Tăng chiều cao hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Để đẩy nội dung thẻ */
+  height: 100%; /* Đảm bảo các thẻ có chiều cao đầy đủ */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  padding: 15px; /* Cung cấp thêm khoảng cách trong thẻ */
+}
+
+.card-title {
+  text-align: center; /* Căn giữa tiêu đề */
+  flex-grow: 1; /* Đẩy tiêu đề lên giữa phần thân thẻ */
+  min-height: 70px; /* Đảm bảo đủ không gian cho tiêu đề sách */
+  margin-bottom: 10px; /* Tạo khoảng cách giữa tiêu đề và các phần khác */
+}
+
+.card-price {
+  margin-top: auto; /* Đẩy giá xuống gần nút Buy Now */
+  margin-bottom: 10px; /* Tạo khoảng cách giữa giá và nút */
+  text-align: center; /* Căn giữa giá sách */
+}
+
+.card-text {
+  flex-grow: 1; /* Phần văn bản có thể mở rộng để cân bằng */
+}
+
+.carousel-item .row {
+  display: flex;
+}
+
+.col-md-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-primary {
+  align-self: center; /* Căn giữa nút Buy Now */
+  margin-top: auto; /* Đẩy nút xuống cuối thẻ */
+}
+
+.product-title {
+  display: block;
+  overflow: hidden;
+  white-space: normal;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  line-height: 1.5;
+  height: 3rem;
+}
+
+.custom-col {
+  flex: 0 0 20%; /* Chia đều 5 sản phẩm mỗi hàng */
+  max-width: 20%; /* Giới hạn chiều rộng từng cột */
+}
+
+/* CSS cho thông báo */
+#notification {
+  position: fixed; /* Giữ cố định thông báo */
+  top: 40px; /* Cách phía trên 20px, chỉnh tùy ý */
+  right: 40px; /* Cách phía bên phải 20px */
+  background-color: #28a745; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  display: none; /* Ẩn khi không sử dụng */
+  z-index: 1000; /* Đảm bảo luôn ở trên cùng */
+}
+
+@media (max-width: 1200px) {
+  .custom-col {
+    flex: 0 0 25%; /* Hiển thị 4 sản phẩm trên mỗi hàng ở màn hình nhỏ hơn */
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-col {
+    flex: 0 0 33.33%; /* Hiển thị 3 sản phẩm trên mỗi hàng ở màn hình nhỏ hơn */
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-col {
+    flex: 0 0 50%; /* Hiển thị 2 sản phẩm trên mỗi hàng ở màn hình nhỏ */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-col {
+    flex: 0 0 100%; /* Hiển thị 1 sản phẩm trên mỗi hàng ở màn hình rất nhỏ */
+    max-width: 100%;
+  }
+}
+
+.suggestions-list {
+  display: none;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: calc(100% - 30px); /* Đảm bảo chiều rộng khớp với ô tìm kiếm */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 45px;
+}
+
+.suggestions-list .suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.suggestions-list .suggestion-item:hover {
+  background-color: #f1f1f1;
+}

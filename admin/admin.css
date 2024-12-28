@@ -1,0 +1,295 @@
+/* Reset and base styling */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* Menu Styling */
+.menu {
+  background-color: #1a1a1a;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 0 10px;
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background: linear-gradient(145deg, #444, #333);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Table styling */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+th {
+  background-color: #007bb5;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+tr:hover {
+  background-color: #f4f4f4;
+}
+
+td {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(145deg, #45a049, #4caf50);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Form Styling */
+form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+form input,
+form button {
+  padding: 12px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 250px;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+form input:focus {
+  border: 1px solid #007bb5;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2);
+}
+
+form button {
+  background: linear-gradient(145deg, #008cba, #007bb5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+form button:hover {
+  background: linear-gradient(145deg, #007bb5, #008cba);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+
+  form input,
+  form button {
+    width: 80%;
+  }
+}
+.toast {
+  visibility: hidden;
+  max-width: 50%;
+  margin: 0 auto;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.success {
+  background-color: #4caf50;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+/* Textarea Styling */
+form textarea {
+  width: 500px;
+  height: 100px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  resize: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+form textarea:focus {
+  border: 1px solid #007bb5;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* File Upload Button Styling */
+form input[type="file"] {
+  display: none; /* Ẩn input file mặc định */
+}
+
+form label.upload-label {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #008cba, #007bb5);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+form label.upload-label:hover {
+  background: linear-gradient(145deg, #007bb5, #008cba);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Select Dropdown Styling */
+form select {
+  text-align: center;
+  width: 200px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  appearance: none; /* Ẩn mũi tên mặc định */
+  background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+form select:focus {
+  border: 1px solid #007bb5;
+  background: linear-gradient(145deg, #f7f7f7, #eaeaea);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon for custom dropdown arrow */
+form select:after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+/* Adjust arrow on hover */
+form select:hover {
+  background: linear-gradient(145deg, #ebebeb, #dedede);
+}
+/* Styling cho liên kết nút "Sửa" */
+a.edit-link {
+  width: 168px;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #4caf50, #45a049);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+a.edit-link:hover {
+  background: linear-gradient(145deg, #45a049, #4caf50);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}

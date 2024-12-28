@@ -1,0 +1,16 @@
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  min-width: 15px;
+  text-align: center;
+}
